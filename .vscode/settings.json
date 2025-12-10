@@ -1,15 +1,7 @@
 {
-    "cucumberautocomplete.steps":[
-        "tests/UI_Test/steps/**.steps.ts"
-],
+  "cucumberautocomplete.steps": ["tests/UI_Test/steps/**.steps.ts"],
 
-    "cucumber.features": [
-        "tests/UI_Test/feature/**.feature",
-       
-    ],
+  "cucumber.features": ["tests/UI_Test/feature/**.feature"],
 
-    "cucumber.glue":[
-        "tests/UI_Test/steps/**.steps.ts"
-        
-    ]
+  "cucumber.glue": ["tests/UI_Test/steps/**.steps.ts"]
 }
