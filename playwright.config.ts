@@ -1,5 +1,5 @@
-import { defineConfig, devices } from "@playwright/test";
-import { defineBddConfig } from "playwright-bdd";
+import { defineConfig, devices } from '@playwright/test';
+import { defineBddConfig } from 'playwright-bdd';
 
 /**
  * Read environment variables from file.
@@ -14,10 +14,10 @@ import { defineBddConfig } from "playwright-bdd";
  */
 
 const testDir = defineBddConfig({
-  features: "tests/UI_Test/feature/***.feature",
+  features: 'tests/UI_Test/feature/***.feature',
   steps: [
-    "tests/UI_Test/steps/***.steps.ts",
-    "tests/UI_Test/fixture/fixtures.ts",
+    'tests/UI_Test/steps/***.steps.ts',
+    'tests/UI_Test/fixture/fixtures.ts',
   ],
 });
 
@@ -35,7 +35,7 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [["html"], ["list"], ["github"]],
+  reporter: [['html'], ['list'], ['github']],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
@@ -46,13 +46,13 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: "chromium",
+      name: 'chromium',
       //grep: /@web/,
       use: {
-        ...devices["Desktop Chrome"],
-        trace: "retain-on-failure",
-        screenshot: "only-on-failure",
-        video: "retain-on-failure",
+        ...devices['Desktop Chrome'],
+        trace: 'retain-on-failure',
+        screenshot: 'only-on-failure',
+        video: 'retain-on-failure',
       },
     },
 

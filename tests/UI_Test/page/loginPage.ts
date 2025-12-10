@@ -1,5 +1,5 @@
-import { Locator, Page } from "@playwright/test";
-import { BasePage } from "./BasePage";
+import { Locator, Page } from '@playwright/test';
+import { BasePage } from './BasePage';
 
 export class LoginPage extends BasePage {
   readonly email_box: Locator;
@@ -7,8 +7,8 @@ export class LoginPage extends BasePage {
 
   constructor(page: Page) {
     super(page);
-    this.email_box = page.getByPlaceholder("E-Mail Address");
-    this.password_box = page.getByPlaceholder("Password");
+    this.email_box = page.getByPlaceholder('E-Mail Address');
+    this.password_box = page.getByPlaceholder('Password');
   }
 
   async navigateToURL(url: string) {
